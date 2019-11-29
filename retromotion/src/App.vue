@@ -19,7 +19,7 @@
           <router-link to="/" style="text-decoration: none; color: black"><p>Lorem</p></router-link>
         </div>
       </div>
-      <router-link to="shop" class="routerlink" style="text-decoration: none"><v-icon style="text-decoration: none">mdi-cart</v-icon></router-link>
+      <router-link to="" class="routerlink" style="text-decoration: none"><v-icon style="text-decoration: none">mdi-cart</v-icon></router-link>
       <v-btn style="background: red; color: white; margin-left: 5%">Meine Garage</v-btn>
     </v-app-bar>
 

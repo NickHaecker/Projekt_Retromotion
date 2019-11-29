@@ -54,7 +54,11 @@
           Mir hän se eschd ä Hauffe Kunde<br>
           eingeheimst.</p>
           <div class="kommentar">
-            
+            <img src="../assets/kreis.png" height="50" width="50">
+            <div class="kommentarname">
+              <h3>Kevin Schmidt</h3><br>
+              <p>Inhaber der Oldtimer-Schmiede und Nutzer des Retromotion Teile-Scouts</p>
+            </div>
           </div>
         </v-container>
       </article>
@@ -87,6 +91,10 @@ export default {
   .infos h1{
     font-size: 40px;
   }
+
+  .erstesbild {
+  }
+
   .zweiterblock{
     background-color: #7e8a9a;
     display: flex;
@@ -134,5 +142,8 @@ export default {
     width: auto;
     height: 30%;
     margin-top: 5%;
+  }
+  .kommentar{
+    display: flex;
   }
 </style>
