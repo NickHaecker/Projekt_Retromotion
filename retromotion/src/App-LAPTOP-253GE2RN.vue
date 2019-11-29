@@ -1,71 +1,33 @@
 <template>
   <v-app>
-    <v-app-bar height="70" app>
+    <v-app-bar max-height="62">
       <v-toolbar-items>
-        <router-link to=""><img src="./assets/Retromotion_logo.png" class="logo" height="90" width="150"/></router-link>
+        <router-link to=""><img src="./assets/Retromotion_logo.png" class="logo" height="84" width="143"/></router-link>
       </v-toolbar-items>
 
-      <router-link class="buttonlink" to="" style="text-decoration: none; margin-left: 30%"><v-btn text class="button">ERSATZTEILE</v-btn></router-link>
+      <router-link class="buttonlink" to="" style="text-decoration: none; margin-left: 20%"><v-btn text class="button">ERSATZTEILE</v-btn></router-link>
       <router-link class="buttonlink" to="" style="text-decoration: none"> <v-btn text class="button">REIFEN</v-btn></router-link>
       <router-link class="buttonlink" to="" style="text-decoration: none"><v-btn text class="button">ZUBEHÖR</v-btn></router-link>
-
       <div class="dropdown">
       <v-btn class="dropbtn" text>COMMUNITY<v-icon style="text-decoration: none">mdi-chevron-down</v-icon></v-btn>
-        <v-list class="dropdown_inhalt">
+        <div class="dropdown_inhalt">
           <router-link to="/" style="text-decoration: none; color: black"><p>Lorem</p></router-link>
           <router-link to="/" style="text-decoration: none; color: black"><p>Lorem</p></router-link>
           <router-link to="/" style="text-decoration: none; color: black"><p>Lorem</p></router-link>
           <router-link to="/" style="text-decoration: none; color: black"><p>Lorem</p></router-link>
           <router-link to="/" style="text-decoration: none; color: black"><p>Lorem</p></router-link>
           <router-link to="/" style="text-decoration: none; color: black"><p>Lorem</p></router-link>
-        </v-list>
+        </div>
       </div>
-
-      <router-link to="" class="routerlink" style="text-decoration: none"><v-icon style="text-decoration: none">mdi-cart</v-icon></router-link>
-
-      <v-row justify="center">
-        <v-dialog v-model="dialog" persistent max-width="900px">
-
-          <template v-slot:activator="{on}">
-            <v-btn style="background: red; color: white; margin-right: 60%" v-on="on">Meine Garage</v-btn>
-          </template>
-
-            <div class="anmeldekarte">
-
-              <section class="anmeldetitel">
-                <h1 class="anmelden">Anmelden</h1>
-                <v-btn text @click="dialog = false" class="zurückbutton"><v-icon>mdi-close</v-icon></v-btn>
-              </section>
-
-              <section class="anmeldepart">
-                <v-container>
-                <article>
-                        <v-text-field name="email" label="Mail" id="email" v-model="email" type="email" required class="eingabefeld"></v-text-field>
-                        <v-text-field name="password" label="Password" id="password" v-model="password" required class="eingabefeld"></v-text-field>
-                        <v-btn type="submit" class="anmeldbutton" style="background: red; color: white; width: 900px; font-weight: lighter">LOGIN</v-btn>
-                </article>
-                </v-container>
-
-                <v-container>
-                <article class="link">
-                  <v-icon style="color: red">mdi-chevron-right</v-icon><router-link to="" class="routerpw"><p>Passwort vergessen?</p></router-link>
-                </article>
-                </v-container>
-              </section>
-
-              <section class="neuanmeldteil">
-                <v-container>
-                  <article>
-                    <v-btn style="color: white; background: #7e8a9a; font-weight: lighter; width: 900px; margin-top: 3%">ACCOUNT ERSTELLEN</v-btn>
-                  </article>
-                </v-container>
-              </section>
-
-            </div>
-        </v-dialog>
-      </v-row>
-
+      <router-link to="shop" class="routerlink" style="text-decoration: none"><v-icon style="text-decoration: none">mdi-cart</v-icon></router-link>
+      <v-btn style="background: red; color: white; margin-left: 5%">Meine Garage</v-btn>
     </v-app-bar>
+
+      <div class="zwischenelement">
+        <div class="menü-inhalt">
+        </div>
+        <a class="menü-inhalt-auslöser">Wie funktioniert Retromotion?<v-icon style="color: red">mdi-chevron-down</v-icon></a>
+      </div>
 
     <v-content>
       <router-view/>
@@ -74,59 +36,52 @@
     <v-footer color="#1c313c" padless>
       <div class="abs">
           <section class="footer-ersterTeil">
-
             <article class="art">
               <h2>Über Retromotion</h2>
               <v-list dense class="liste" color="#1c313c">
                 <v-list-item v-for="item in ÜR" :key="item.titel" :to="item.to" link color=" #7e8a9a">
                   <v-list-item-content>
-                    <v-list-item-title class="listitem">{{item.title}}</v-list-item-title>
+                    <v-list-item-title>{{item.title}}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
               </v-list>
             </article>
-
             <article class="art">
               <h2>Kundenservice</h2>
               <v-list dense class="liste" color="#1c313c">
                 <v-list-item v-for="item in K" :key="item.titel" :to="item.to" link color="#7e8a9a">
                   <v-list-item-content>
-                    <v-list-item-title class="listitem">{{item.title}}</v-list-item-title>
+                    <v-list-item-title>{{item.title}}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
               </v-list>
             </article>
-
             <article class="art">
               <h2>Hilfe & Support</h2>
               <v-list dense class="liste" color="#1c313c">
                 <v-list-item v-for="item in HuS" :key="item.titel" :to="item.to" link color=" #7e8a9a">
                   <v-list-item-content>
-                    <v-list-item-title class="listitem">{{item.title}}</v-list-item-title>
+                    <v-list-item-title>{{item.title}}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
               </v-list>
             </article>
-
             <article class="art">
               <h2>Top-Produkte</h2>
               <v-list dense class="liste" color="#1c313c">
                 <v-list-item v-for="item in TP" :key="item.titel" :to="item.to" link>
                   <v-list-item-content>
-                    <v-list-item-title class="listitem">{{item.title}}</v-list-item-title>
+                    <v-list-item-title>{{item.title}}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
               </v-list>
             </article>
-
             <article class="art">
               <h2>Partner von Retromotion</h2>
-
               <div class="bilder">
                 <img src="./assets/logo-techalliance.png" height="80" style="background-color: white" class="partner">
                 <img src="./assets/pci_seal_de.png" width="80" class="partner"/>
               </div>
-
               <div class="social">
                 <div class="socialfield">
                   <h2>Folge uns!</h2>
@@ -136,7 +91,6 @@
                     <router-link to="" style="text-decoration: none" class="eicons"><v-icon color="red">mdi-linkedin</v-icon></router-link>
                   </div>
                 </div>
-
                 <div class="sprache">
                   <h2>Sprache</h2>
                   <div class="tropdaun">
@@ -150,7 +104,6 @@
               </div>
             </article>
           </section>
-
           <section class="bezahlung">
             <article class="titel"><h2>Zahlungsarten</h2></article>
             <article class="zahlart">
@@ -161,7 +114,6 @@
             </article>
           </section>
       </div>
-
       <div color="#14252E"  class="cor">
         <v-col cols="12" class="footer-letzterTeil">
           &copy; {{ new Date().getFullYear() }}
@@ -191,7 +143,6 @@ export default {
   },
 
   data: () => ({
-    dialog: false,
     ÜR:[
       {title: "Über uns", to: ""},
       {title: "Unsere Marken", to: ""},
@@ -220,49 +171,14 @@ export default {
 </script>
 
 <style scoped>
-  .neuanmeldteil{
-    height: 100px;
-  }
-  .anmeldepart{
-    border-bottom: #7e8a9a solid;
-  }
-  .routerpw{
-    text-decoration: underline red;
-    color: red;
-    margin-top: 2%;
-  }
-  .link{
-    display: flex;
-    margin-top: -2%;
-  }
-  .anmeldekarte{
-    background: white;
-  }
-.anmeldetitel{
-  display: flex;
-  background-color: #dde6ef;
-  height: 120px;
-}
-.anmelden{
-  text-align: center;
-  font-size: 40px;
-  font-weight: lighter;
-  margin-left: 42%;
-  margin-top: 4%;
-}
-.zurückbutton{
-  margin-left: 30%;
-}
-.anmeldbutton{
-}
   .button:hover{
     text-decoration: underline red;
   }
  .buttonlink{
-   margin-left: 0%;
+   margin: 1%;
  }
   .dropdown{
-    margin-left: 0%;
+    margin: 1%;
   }
   .dropdown_inhalt{
     display: none;
@@ -279,21 +195,21 @@ export default {
   .dropdown:hover .dropdown_inhalt{
     display: block;
   }
-  .dropdown:hover .dropbtn {
+  .dropdown:hover .dropbtn{
    text-decoration: underline red;
   }
-  .routerlink{
-    margin-left: 4%;
-  }
-  .listitem{
-    color: #7e8a9a;
-  }
-  .listitem:hover{
-    color: white;
-  }
   .logo{
-    margin-left: 240%;
-    margin-top: 10%;
+    margin-left: 50%;
+  }
+  .zwischenelement{
+    background-color: #1c313c;
+    height: 5%;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+  }
+  .zwischenelement a{
+    color: red;
   }
   .footer-ersterTeil{
     display: flex;
@@ -384,9 +300,6 @@ export default {
   .footer-letzterTeil{
     margin-left: 15%;
     color: #7e8a9a;
-  }
-  .footer-letzterTeil a:hover{
-    color: white;
   }
   .abs{
     /*justify-content: center;*/
