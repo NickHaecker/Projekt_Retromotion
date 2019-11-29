@@ -105,7 +105,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Home",
   // components: {
@@ -116,119 +115,34 @@ export default {
     })
 };
 </script>
-
-
 <style scoped>
-  .zwischenelement{
-    background-color: #1c313c;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-    padding-top: 0.6%;
-  }
-  .zwischenelement a{
-    color: white;
-  }
-  .zwischenelement a:hover{
-    color: red;
-  }
-.infos{
-  width: 30%;
-  background: white;
-  opacity: 0.7;
-  margin-left: 18%;
-  margin-top: 5%;
-}
-  .infos h1{
-    font-size: 40px;
-  }
-
-  .erstesbild {
-  }
-
-  .zweiterblock{
-    background-color: #7e8a9a;
-    display: flex;
-    justify-content: center;
-  }
- .kreisbild{
-
- }
-  .menü{
-    margin: 2%;
-  }
-  .suchanfrage{
-    margin-left: 17%;
-    margin-top: 8%;
-  }
-  .suchergebnis{
-    margin-left: 12%;
-    margin-top: 8%;
-  }
-  .chat{
-    margin-left: 22%;
-    margin-top: 7%;
-  }
-  .bildunterschrift{
-    display: flex;
-  }
-  .bildunterschrift p{
-    margin-top: 1%;
-  }
-  .bildunterschrift h1{
-    color: red;
-  }
-  .text{
-    width: 40%;
-    margin-left: 15%;
-  }
-  .text h1{
-    font-size: 40px;
-  }
-  .parteins{
-    display: flex;
-  }
-  .rahmen{
-    border: solid #7e8a9a;
-    width: auto;
-    height: 30%;
-    margin-top: 2%;
-    margin-right: 15%;
-  }
-  .zitat{
-    text-align: center;
-  }
-  .kommentar{
-    display: flex;
-  }
-  .beschreibung{
-    margin-top: -8%;
-  }
-  .kommentarbild{
-    margin-top: 6%;
-  }
-  .kommentarname h3{
-    margin-top: 2%;
-  }
-  .vierterblock{
-    background-color: #7e8a9a;
-  }
-  .frage{
-    display: flex;
-    justify-content: center;
-  }
-  .aufforderung{
-    text-align: center;
-    font-size: 40px;
-  }
-  .beschreibungtelefon{
-    background-color: white;
-    height: 200%;
-  }
-  .telenummer{
-    margin-top: -6%;
-  }
-  .email{
-    margin-top: -6%;
-  }
+  .zwischenelement{background-color: #1c313c;height: 50px;text-align: center;text-decoration: none;padding-top: 0.6%;}
+  .zwischenelement a{color: white;}
+  .zwischenelement a:hover{color: red;}
+  .infos{width: 30%;background: white;opacity: 0.7;margin-left: 18%;margin-top: 5%;}
+  .infos h1{font-size: 40px;}
+  .erstesbild {}
+  .zweiterblock{background-color: #7e8a9a;display: flex;justify-content: center;}
+  .menü{margin: 2%;}
+  .suchanfrage{margin-left: 17%;margin-top: 8%;}
+  .suchergebnis{margin-left: 12%;margin-top: 8%;}
+  .chat{margin-left: 22%;margin-top: 7%;}
+  .bildunterschrift{display: flex;}
+  .bildunterschrift p{margin-top: 1%;}
+  .bildunterschrift h1{color: red;}
+  .text{width: 40%;margin-left: 15%;}
+  .text h1{font-size: 40px;}
+  .parteins{display: flex;}
+  .rahmen{border: solid #7e8a9a;width: auto;height: 30%;margin-top: 2%;margin-right: 15%;}
+  .zitat{text-align: center;}
+  .kommentar{display: flex;}
+  .beschreibung{margin-top: -8%;}
+  .kommentarbild{margin-top: 6%;}
+  .kommentarname h3{margin-top: 2%;}
+  .vierterblock{background-color: #7e8a9a;}
+  .frage{display: flex;justify-content: center;}
+  .aufforderung{text-align: center;font-size: 40px;}
+  .beschreibungtelefon{background-color: white;height: 200%;}
+  .telenummer{margin-top: -6%;}
+  .email{margin-top: -6%;}
 </style>
