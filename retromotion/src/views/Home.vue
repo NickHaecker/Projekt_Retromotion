@@ -1,9 +1,40 @@
 <template>
-  <div class="inhalt">
+  <div class="inhalt" sm md>
     <section class="zwischenelement">
-      <div class="menü-inhalt">
-        <a class="menü-inhalt-auslöser">Wie funktioniert Retromotion?<v-icon style="color: red">mdi-chevron-down</v-icon></a>
-      </div>
+     <input id="checkbox" type="checkbox">
+      <section class="boxinhalt">
+        <div class="überschrift">
+          <h1>So funktioniert Retromotion</h1>
+        </div>
+        <v-container class="inhaltinhaltinhalt">
+          <router-link to="" class="inhaltrouter">
+            <article class="inhaltartikel">
+              <v-icon class="artikelicon"  style="color: red; font-size: 50px">mdi-store</v-icon>
+              <h3>1.Teile-Shop</h3>
+              <p>Durchsuche unseren Online-Ersatzteile Shop.</p>
+          </article>
+          </router-link>
+          <v-icon style="color: #7e8a9a; font-size: 60px" class="pfeilrechts">mdi-chevron-right</v-icon>
+          <router-link to="" class="inhaltrouter">
+            <article class="inhaltartikel">
+              <v-icon class="artikelicon" style="color: red; font-size: 50px">mdi-magnify</v-icon>
+              <h3>2.Teile-Scout</h3>
+              <p>Nicht fündig geworden? Wir übernehmen für dich!</p>
+          </article>
+          </router-link>
+          <v-icon style="color: #7e8a9a;font-size: 60px" class="pfeilrechts">mdi-chevron-right</v-icon>
+          <router-link to="" class="inhaltrouter">
+          <article class="inhaltartikel">
+              <v-icon class="artikelicon"  style="color: red;font-size: 50px">mdi-factory</v-icon>
+              <h3>3.Nachfertigung</h3>
+              <p>Lasse dein Teil in Höchstqualität nachfertigen.</p>
+          </article>
+          </router-link>
+        </v-container>
+      </section>
+      <v-container class="labelbox">
+      <label for="checkbox" class="textbutton">Wie funktioniert Retromotion?<v-icon style="color: white;" class="labelicon">mdi-chevron-down</v-icon></label>
+      </v-container>
     </section>
 
     <section class="erstesbild">
@@ -107,18 +138,32 @@
 <script>
 export default {
   name: "Home",
-  // components: {
-  //   // vorfooter,
-  // },
     data: () => ({
 
     })
 };
 </script>
 <style scoped>
-  .zwischenelement{background-color: #1c313c;height: 50px;text-align: center;text-decoration: none;padding-top: 0.6%;}
-  .zwischenelement a{color: white;}
-  .zwischenelement a:hover{color: red;}
+  template{font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;}
+  .boxinhalt {display: none;height:0;-webkit-animation-name: example;-webkit-animation-duration: 2s;animation-name: example;animation-duration: 2s;}
+  @-webkit-keyframes example { from {height: 0;} to {height: 250px} }
+  #checkbox {display:none;}
+  .überschrift{text-align: center; color: white; font-size: 30px; font-weight: lighter}
+  .überschrift h1  {font-weight: lighter}
+  .textbutton{background-color: #1c313c;}
+  .labelbox{text-align: center;}
+  .pfeilrechts{margin-top: 2%;}
+  label{height: 100px;color: white;}
+  label:hover{color: red;}
+  #checkbox:checked ~ .boxinhalt {display: block;height: 250px;}
+  .inhaltinhaltinhalt{display: flex;text-align: center;justify-content: center;}
+  .inhaltartikel{margin: 2%;color: white;}
+  .inhaltartikel h3{font-size: 25px;}
+  .inhaltartikel p{width: auto; margin-top: 6%}
+  .inhaltartikel:hover{color: red}
+  .artikelicon{color: red;}
+  .inhaltrouter{text-decoration: none;margin-top: 1%;}
+  .zwischenelement{background-color: #1c313c;}
   .infos{width: 30%;background: white;opacity: 0.7;margin-left: 18%;margin-top: 5%;}
   .infos h1{font-size: 40px;}
   .erstesbild {}

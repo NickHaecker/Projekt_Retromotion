@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-app-bar height="70" app>
+  <v-app sm md>
+    <v-app-bar height="70" app class="appbar">
       <v-toolbar-items>
         <router-link to=""><img src="./assets/Retromotion_logo.png" class="logo" height="90" width="150"/></router-link>
       </v-toolbar-items>
@@ -52,6 +52,11 @@
                 </article>
                 </v-container>
               </section>
+              <section class="bindestrich">
+                <article class="neubei">
+                 <span>Neu bei Retromotion?</span>
+                </article>
+              </section>
 
               <section class="neuanmeldteil">
                 <v-container>
@@ -74,7 +79,7 @@
     <v-footer color="#1c313c" padless>
       <div class="abs">
           <section class="footer-ersterTeil">
-
+<!--<v-container class="footercontainer">-->
             <article class="art">
               <h2>Über Retromotion</h2>
               <v-list dense class="liste" color="#1c313c">
@@ -149,6 +154,7 @@
                 </div>
               </div>
             </article>
+<!--</v-container>-->
           </section>
 
           <section class="bezahlung">
@@ -220,8 +226,11 @@ export default {
 </script>
 
 <style scoped>
+  .appbar{align-content: center}
+  template{font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;}
+  .bindestrich{color: #7e8a9a; border-top: #7e8a9a solid 1px; text-align: center}
+  .neubei{margin-top: -13px; position: relative}
   .neuanmeldteil{height: 100px;}
-  .anmeldepart{border-bottom: #7e8a9a solid;}
   .routerpw{text-decoration: underline red;color: red;margin-top: 2%;}
   .link{display: flex;margin-top: -2%;}
   .anmeldekarte{background: white;}
@@ -229,7 +238,7 @@ export default {
   .anmelden{text-align: center;font-size: 40px;font-weight: lighter;margin-left: 42%;margin-top: 4%;}
   .zurückbutton{margin-left: 30%;}
   .anmeldbutton{}
-  .button:hover{text-decoration: underline red;}
+  .button:hover{text-decoration: underline red; text-underline-position: under}
   .buttonlink{margin-left: 0%;}
   .dropdown{margin-left: 0%;}
   .dropdown_inhalt{display: none;position: absolute;min-width: 7%;z-index: 1;background-color: white;}
@@ -239,8 +248,8 @@ export default {
   .routerlink{margin-left: 4%;}
   .listitem{color: #7e8a9a;}
   .listitem:hover{color: white;}
-  .logo{margin-left: 240%;margin-top: 10%;}
-  .footer-ersterTeil{display: flex;width: 75%; /*justify-content: space-evenly;*/color: white;margin-left: 10%;margin-top: 1.5%;}
+  .logo{align-content: flex-start; margin-left: 60%;margin-top: 10%;}
+  .footer-ersterTeil{display: flex;width: 75%; /*justify-content: space-evenly;*/color: white;align-content: center;margin-top: 1.5%;}
   .art{ /*justify-content: space-evenly;*/ /*width: 40%;*/ /*font-size: 10px;*/font-size: 10px;margin-left: 5%;}
   .liste{ /*background: #1c313c;*/color: #7e8a9a;}
   .bilder{display: flex;margin-left: -2%;}
@@ -254,16 +263,16 @@ export default {
   .tropdaun{position: relative;display: inline-block;}
   .tropdaun-inhalt a{text-decoration: none;display: block;}
   .show{display: block;}
-  .bezahlung{border-top: white solid 1px;width: 120%;color: white;margin-left: 12%;margin-top: 1.5%;font-size: 10px;}
+  .bezahlung{border-top: white solid 1px;width: 120%;color: white;align-content: center;margin-top: 1.5%;font-size: 10px;}
   .titel{margin-left: 1%;}
   .zahlart{margin-top: 1%;margin-left: 0%;display: flex;}
   .bezahlbilder{margin-left: 1%;background-color: white;}
   .cor{background-color: #14252E;width: 100%;margin-top: 4%;}
-  .footer-letzterTeil{margin-left: 15%;color: #7e8a9a;}
+  .footer-letzterTeil{align-content: center;color: #7e8a9a;}
   .footer-letzterTeil a:hover{color: white;}
   .abs{ /*justify-content: center;*/margin-left: 10%;margin-top: 2%;}
   .partner{margin-left: 2%;}
-  .footer-links{text-decoration: none;margin-left: 4%;}
+  .footer-links{text-decoration: none;align-content: flex-end; margin-left: 10%}
   .footer-links-links{color: #7e8a9a;}
 </style>
 
