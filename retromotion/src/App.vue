@@ -1,13 +1,13 @@
 <template>
-  <v-app sm md>
+  <v-app>
     <v-app-bar height="70" app class="appbar">
       <v-toolbar-items>
         <router-link to=""><img src="./assets/Retromotion_logo.png" class="logo" height="90" width="150"/></router-link>
       </v-toolbar-items>
 
-      <router-link class="buttonlink" to="" style="text-decoration: none; margin-left: 30%"><v-btn text class="button">ERSATZTEILE</v-btn></router-link>
-      <router-link class="buttonlink" to="" style="text-decoration: none"> <v-btn text class="button">REIFEN</v-btn></router-link>
-      <router-link class="buttonlink" to="" style="text-decoration: none"><v-btn text class="button">ZUBEHÖR</v-btn></router-link>
+      <router-link class="buttonlink" to="" style="text-decoration: none; margin-left: 30%; color: #1c313c"><v-btn text class="button">ERSATZTEILE</v-btn></router-link>
+      <router-link class="buttonlink" to="" style="text-decoration: none; color: #1c313c"> <v-btn text class="button">REIFEN</v-btn></router-link>
+      <router-link class="buttonlink" to="" style="text-decoration: none; color: #1c313c"><v-btn text class="button">ZUBEHÖR</v-btn></router-link>
 
       <div class="dropdown">
       <v-btn class="dropbtn" text>COMMUNITY<v-icon style="text-decoration: none">mdi-chevron-down</v-icon></v-btn>
@@ -79,7 +79,6 @@
     <v-footer color="#1c313c" padless>
       <div class="abs">
           <section class="footer-ersterTeil">
-<!--<v-container class="footercontainer">-->
             <article class="art">
               <h2>Über Retromotion</h2>
               <v-list dense class="liste" color="#1c313c">
@@ -102,7 +101,7 @@
               </v-list>
             </article>
 
-            <article class="art">
+            <article class="art" id="hilfesupport">
               <h2>Hilfe & Support</h2>
               <v-list dense class="liste" color="#1c313c">
                 <v-list-item v-for="item in HuS" :key="item.titel" :to="item.to" link color=" #7e8a9a">
@@ -113,7 +112,7 @@
               </v-list>
             </article>
 
-            <article class="art">
+            <article class="art" id="topprodukte">
               <h2>Top-Produkte</h2>
               <v-list dense class="liste" color="#1c313c">
                 <v-list-item v-for="item in TP" :key="item.titel" :to="item.to" link>
@@ -154,7 +153,6 @@
                 </div>
               </div>
             </article>
-<!--</v-container>-->
           </section>
 
           <section class="bezahlung">
@@ -183,19 +181,13 @@
 <script>
 
 
-import Home from "./views/Home";
+// import Home from "./views/Home";
 
 export default {
 
   props:{
     source: String,
   },
-
-  component: {
-    // HelloWorld
-    Home,
-  },
-
   data: () => ({
     dialog: false,
     ÜR:[
@@ -226,6 +218,23 @@ export default {
 </script>
 
 <style scoped>
+  @media only screen and(max-device-width: 420px){
+    .logo{
+      height: 30px;
+      width: 90px;
+    }
+    #hilfesupport{
+    }
+    .abs{
+      margin-left: 0%;
+    }
+    .art{
+      margin-left: 0%;
+    }
+    .footer-ersterTeil{
+      display: grid;
+    }
+  }
   .appbar{align-content: center}
   template{font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;}
   .bindestrich{color: #7e8a9a; border-top: #7e8a9a solid 1px; text-align: center}
@@ -238,18 +247,18 @@ export default {
   .anmelden{text-align: center;font-size: 40px;font-weight: lighter;margin-left: 42%;margin-top: 4%;}
   .zurückbutton{margin-left: 30%;}
   .anmeldbutton{}
-  .button:hover{text-decoration: underline red; text-underline-position: under}
+  .button:hover{text-decoration: underline #1c313c; text-underline-position: under}
   .buttonlink{margin-left: 0%;}
   .dropdown{margin-left: 0%;}
   .dropdown_inhalt{display: none;position: absolute;min-width: 7%;z-index: 1;background-color: white;}
   .dropdown_inhalt p{text-decoration: none;display: block;margin: 10%;}
   .dropdown:hover .dropdown_inhalt{display: block;}
-  .dropdown:hover .dropbtn {text-decoration: underline red;}
+  .dropdown:hover .dropbtn {text-decoration: underline #1c313c;}
   .routerlink{margin-left: 4%;}
   .listitem{color: #7e8a9a;}
   .listitem:hover{color: white;}
   .logo{align-content: flex-start; margin-left: 60%;margin-top: 10%;}
-  .footer-ersterTeil{display: flex;width: 75%; /*justify-content: space-evenly;*/color: white;align-content: center;margin-top: 1.5%;}
+  .footer-ersterTeil{display: flex; /*justify-content: space-evenly;*/color: white;align-content: center;margin-top: 1.5%;}
   .art{ /*justify-content: space-evenly;*/ /*width: 40%;*/ /*font-size: 10px;*/font-size: 10px;margin-left: 5%;}
   .liste{ /*background: #1c313c;*/color: #7e8a9a;}
   .bilder{display: flex;margin-left: -2%;}
@@ -263,7 +272,7 @@ export default {
   .tropdaun{position: relative;display: inline-block;}
   .tropdaun-inhalt a{text-decoration: none;display: block;}
   .show{display: block;}
-  .bezahlung{border-top: white solid 1px;width: 120%;color: white;align-content: center;margin-top: 1.5%;font-size: 10px;}
+  .bezahlung{border-top: white solid 1px;color: white;align-content: center;margin-top: 1.5%;font-size: 10px; margin-left: 3%}
   .titel{margin-left: 1%;}
   .zahlart{margin-top: 1%;margin-left: 0%;display: flex;}
   .bezahlbilder{margin-left: 1%;background-color: white;}

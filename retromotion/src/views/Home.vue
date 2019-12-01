@@ -1,5 +1,5 @@
 <template>
-  <div class="inhalt" sm md>
+  <div class="inhalt">
     <section class="zwischenelement">
      <input id="checkbox" type="checkbox">
       <section class="boxinhalt">
@@ -155,6 +155,7 @@ export default {
   .pfeilrechts{margin-top: 2%;}
   label{height: 100px;color: white;}
   label:hover{color: red;}
+  .labelbox:checked ~ .labelbox ~ label{color: red}
   #checkbox:checked ~ .boxinhalt {display: block;height: 250px;}
   .inhaltinhaltinhalt{display: flex;text-align: center;justify-content: center;}
   .inhaltartikel{margin: 2%;color: white;}
