@@ -259,7 +259,7 @@ export default {
   .listitem:hover{color: white;}
   .logo{align-content: flex-start; margin-left: 60%;margin-top: 10%;}
   .footer-ersterTeil{display: flex; /*justify-content: space-evenly;*/color: white;align-content: center;margin-top: 1.5%;}
-  .art{ /*justify-content: space-evenly;*/ /*width: 40%;*/ /*font-size: 10px;*/font-size: 10px;margin-left: 5%;}
+  .art{ /*justify-content: space-evenly;*/ /*width: 40%;*/ /*font-size: 10px;*/font-size: 10px;margin-left: 5%;display: block}
   .liste{ /*background: #1c313c;*/color: #7e8a9a;}
   .bilder{display: flex;margin-left: -2%;}
   .social{margin-top: 5%;display: flex;}
