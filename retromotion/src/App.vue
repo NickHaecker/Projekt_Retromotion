@@ -5,7 +5,7 @@
         <router-link to=""><img src="./assets/Retromotion_logo.png" class="logo" height="90" width="150"/></router-link>
       </v-toolbar-items>
 
-      <router-link class="buttonlink" to="" style="text-decoration: none; margin-left: 30%; color: #1c313c"><v-btn text class="button">ERSATZTEILE</v-btn></router-link>
+      <router-link class="buttonlink" to="" style="text-decoration: none; color: #1c313c; margin-left: 20%"><v-btn text class="button">ERSATZTEILE</v-btn></router-link>
       <router-link class="buttonlink" to="" style="text-decoration: none; color: #1c313c"> <v-btn text class="button">REIFEN</v-btn></router-link>
       <router-link class="buttonlink" to="" style="text-decoration: none; color: #1c313c"><v-btn text class="button">ZUBEHÖR</v-btn></router-link>
 
@@ -27,7 +27,7 @@
         <v-dialog v-model="dialog" persistent max-width="900px">
 
           <template v-slot:activator="{on}">
-            <v-btn style="background: red; color: white; margin-right: 60%" v-on="on">Meine Garage</v-btn>
+            <v-btn style="background: red; color: white; margin-right: 40%" v-on="on">Meine Garage</v-btn>
           </template>
 
             <div class="anmeldekarte">
@@ -266,10 +266,8 @@ export default {
   }
   .footer-ersterTeil{
     display: flex;
-    width: 75%;
     /*justify-content: space-evenly;*/
     color: white;
-    margin-left: 10%;
     margin-top: 1.5%;
   }
   .art{
@@ -363,7 +361,7 @@ export default {
   .zurückbutton{margin-left: 30%;}
   .anmeldbutton{}
   .button:hover{text-decoration: underline #1c313c; text-underline-position: under}
-  .buttonlink{margin-left: 0%;}
+  .buttonlink{justify-content: center; margin-left: 0%}
   .dropdown{margin-left: 0%;}
   .dropdown_inhalt{display: none;position: absolute;min-width: 7%;z-index: 1;background-color: white;}
   .dropdown_inhalt p{text-decoration: none;display: block;margin: 10%;}
@@ -373,7 +371,7 @@ export default {
   .listitem{color: #7e8a9a;}
   .listitem:hover{color: white;}
   .logo{align-content: flex-start; margin-left: 60%;margin-top: 10%;}
-  .footer-ersterTeil{display: flex; /*justify-content: space-evenly;*/color: white;align-content: center;margin-top: 1.5%;}
+  .footer-ersterTeil{display: flex; /*justify-content: space-evenly;*/color: white;justify-content: space-evenly;margin-top: 1.5%;}
   .art{ /*justify-content: space-evenly;*/ /*width: 40%;*/ /*font-size: 10px;*/font-size: 10px;margin-left: 5%;display: block}
   .liste{ /*background: #1c313c;*/color: #7e8a9a;}
   .bilder{display: flex;margin-left: -2%;}
@@ -387,7 +385,7 @@ export default {
   .tropdaun{position: relative;display: inline-block;}
   .tropdaun-inhalt a{text-decoration: none;display: block;}
   .show{display: block;}
-  .bezahlung{border-top: white solid 1px;color: white;align-content: center;margin-top: 1.5%;font-size: 10px; margin-left: 3%}
+  .bezahlung{border-top: white solid 1px;color: white;align-content: flex-start;margin-top: 1.5%;font-size: 10px; margin-left: -9%}
   .titel{margin-left: 1%;}
   .zahlart{margin-top: 1%;margin-left: 0%;display: flex;}
   .bezahlbilder{margin-left: 1%;background-color: white;}

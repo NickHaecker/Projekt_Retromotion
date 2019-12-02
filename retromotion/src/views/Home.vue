@@ -164,7 +164,7 @@ export default {
   .inhaltartikel:hover{color: red}
   .artikelicon{color: red;}
   .inhaltrouter{text-decoration: none;margin-top: 1%;}
-  .zwischenelement{background-color: #1c313c;}
+  .zwischenelement{background-color: #1c313c;margin-top: -2.5%}
   .infos{width: 30%;background: white;opacity: 0.7;margin-left: 18%;margin-top: 5%;}
   .infos h1{font-size: 40px;}
   .erstesbild {}
